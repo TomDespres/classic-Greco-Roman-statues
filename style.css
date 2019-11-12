@@ -95,8 +95,6 @@ pointer-events: none;
   background-image: url("imgs/bgMarbre.png");
   background-size: cover;
   background-position: center;
-
-
 }
 #bg-rope{
   width:100%;
@@ -106,104 +104,32 @@ pointer-events: none;
   background-size: cover;
 }
 
-#mask1{
-  animation: mask1 10s 0s ease;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-  /* transform: scale(3) translate(-100px, -100px); */
 
-}
-#mask1:hover{
-  color: blue;
+
+#mask1{
+  transform: scale(2.3) translate(-20px, -130px);
+  transition: transform 1s 0s ease;
 }
 #mask2{
-  animation: mask2 10s -2s ease;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-  /* transform: scale(3) translate(-100px, -100px); */
-
+  transform: scale(2.4) translate(-100px, -80px);
+  transition: transform 1s 0s ease;
 }
 #mask3{
-  animation: mask3 10s -4s ease;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-  /* transform: scale(3) translate(-100px, -100px); */
-
+  transform: scale(2.4) translate(-95px, -130px);
+  transition: transform 1s 0s ease;
 }
 #mask4{
-  animation: mask4 10s -4s ease;
-  animation-direction: alternate-reverse;
-  animation-iteration-count: infinite;
-  /* transform: scale(0.5); */
+  transform:  scale(1) translate(920px, -385px);
+  transition: transform 1s 0s ease;
 }
 #mask5{
   width:100vw;
   transform: translate(-200px, 210px);
 }
 
-@keyframes mask1 {
-  to{
-    transform: scale(2.3) translate(-20px, -130px);
 
-  }
-  from{
-    transform: scale(2.3) translate(-12px, -125px);
 
-  }
 
-}
-@keyframes mask2 {
-  to{
-    transform: scale(2.4) translate(-100px, -80px);
-
-  }
-  from{
-    transform: scale(2.4) translate(-96px, -75px);
-
-  }
-
-}
-@keyframes mask3 {
-  to{
-    transform: scale(2.4) translate(-95px, -130px);
-
-  }
-  from{
-    transform: scale(2.4) translate(-90px, -125px);
-
-  }
-
-}
-@keyframes mask4 {
-  to{
-    transform: scale(1) translate(920px, -385px);
-  }
-  from{
-    transform: scale(1) translate(900px, -400px);
-  }
-}
-@keyframes mask5 {
-  to{
-    transform: scale(1) translate(920px, -385px);
-  }
-  from{
-    transform: scale(1) trans late(900px, -400px);
-  }
-}
-#decoupage{
-
-}
-
-/* #bg-wrapper:hover #mask1{
-  animation-duration: 0.4s;
-}
-#bg-wrapper:hover #mask2{
-  animation-duration: 0.4s;
-}#bg-wrapper:hover #mask3{
-  animation-duration: 0.4s;
-}#bg-wrapper:hover #mask4{
-  animation-duration: 0.4s;
-} */
 #bg-wrapper{
   z-index:1;
   position: absolute;
@@ -214,6 +140,8 @@ pointer-events: none;
   background-size: cover;
 background-position: center;
   clip-path:  url("#decoupage");
+  filter: brightness(1);
+  transition: filter .3s 0s ease;
 
   /* mask-mode: alpha;
   mask-repeat: no-repeat;

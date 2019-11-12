@@ -32,26 +32,25 @@ navWrapperS = navWrapper.style;
 
 
 function bgWrapper(){
-
-  mask1S.setProperty("animation-duration", ".3s");
-  mask2S.setProperty("animation-duration", ".3s");
-  mask3S.setProperty("animation-duration", ".4s");
-  mask4S.setProperty("animation-duration", ".4s");
+  mask1S.setProperty("transform", "scale(2.3)  translate(-12px, -125px)");
+  // mask1S.setProperty("animation-duration", "1s");
+  mask2S.setProperty("transform", "scale(2.4) translate(-96px, -75px)");
+  mask3S.setProperty("transform", "scale(2.4) translate(-90px, -125px)");
+  mask4S.setProperty("transform", "scale(1) translate(900px, -400px)");
   about.innerHTML = "Experimental website<br> Tom Despres";
   navButton.style.visibility = "visible";
   marbreS.setProperty("filter", "brightness(1)");
 
 }
+
 function bgRope(){
-  mask1S.setProperty("animation-duration", "10s");
-  mask2S.setProperty("animation-duration", "10s");
-  mask3S.setProperty("animation-duration", "10s");
-  mask4S.setProperty("animation-duration", "10s");
+  mask1S.setProperty("transform", "scale(2.3) translate(-20px, -130px)");
+  mask2S.setProperty("transform", "scale(2.4) translate(-100px, -80px)");
+  mask3S.setProperty("transform", "scale(2.4) translate(-95px, -130px)");
+  mask4S.setProperty("transform", "scale(1) translate(920px, -385px)");
   about.innerHTML = "";
   navButton.style.visibility = "hidden";
   marbreS.setProperty("filter", "brightness(1)");
-
-
 }
 // function quitMenu(){
 //   about.innerHTML = "Quit Menu";
@@ -61,20 +60,20 @@ function bgRope(){
 //   mask4S.setProperty("animation-duration", ".4s");
 // }
 function bd(){
-  mask1S.setProperty("animation-duration", ".3s");
-  mask2S.setProperty("animation-duration", ".3s");
-  mask3S.setProperty("animation-duration", ".4s");
-  mask4S.setProperty("animation-duration", ".4s");
+  mask1S.setProperty("transform", "scale(2.3)  translate(-12px, -125px)");
+  mask2S.setProperty("transform", "scale(2.4) translate(-96px, -75px)");
+  mask3S.setProperty("transform", "scale(2.4) translate(-90px, -125px)");
+  mask4S.setProperty("transform", "scale(1) translate(900px, -400px)");
   marbreS.setProperty("filter", "brightness(0.1)");
   about.innerHTML = "Enter Menu";
   navButton.style.visibility = "visible";
 }
 function clickOnNavButton(){
   if(iNav==false){
-  mask1S.setProperty("animation-duration", "10s");
-  mask2S.setProperty("animation-duration", "10s");
-  mask3S.setProperty("animation-duration", "10s");
-  mask4S.setProperty("animation-duration", "10s");
+    mask1S.setProperty("transform", "scale(2.3) translate(-20px, -130px)");
+    mask2S.setProperty("transform", "scale(2.4) translate(-100px, -80px)");
+    mask3S.setProperty("transform", "scale(2.4) translate(-95px, -130px)");
+    mask4S.setProperty("transform", "scale(1) translate(920px, -385px)");
   about.innerHTML = "Work<br>About<br>Contact";
   navButton.style.visibility = "visible";
   marbreS.setProperty("filter","brightness(0.1)");
