@@ -30,6 +30,11 @@ navButtonS = navButton.style;
 navWrapper = document.getElementById('nav-wrapper');
 navWrapperS = navWrapper.style;
 
+var mainContainerCircle = document.getElementsByClassName('mainContainerCircle');
+// console.log(mainContainerCircle[0])
+// mainContainerCircle.forEach(function(element) {
+//   console.log(element);
+// });
 
 function bgWrapper(){
   mask1S.setProperty("transform", "scale(2.3)  translate(-12px, -125px)");
@@ -76,8 +81,14 @@ function clickOnNavButton(){
     mask4S.setProperty("transform", "scale(1) translate(920px, -385px)");
   about.innerHTML = "Work<br>About<br>Contact";
   navButton.style.visibility = "visible";
-  marbreS.setProperty("filter","brightness(0.1)");
 
+  marbreS.setProperty("filter","brightness(0.1)");
+  for(let i=0 ; i <= 2 ;i++){
+    mainContainerCircle[i].classList.remove("activeCircle");
+
+    mainContainerCircle[i].classList.add("inactiveCircle");
+  console.log(mainContainerCircle[i]);
+}
   marbre.removeEventListener("mousemove", bgWrapper);
   bg.removeEventListener("mouseover", bgRope);
   navButton.removeEventListener("mousemove", bd);
@@ -92,6 +103,13 @@ else{
 
   navButtonS.setProperty("pointer-event","none");
   navButton.style.visibility = "hidden";
+  for(var i=0 ; i <= 2 ;i++){
+    mainContainerCircle[i].classList.remove("inactiveCircle");
+
+  mainContainerCircle[i].classList.add("activeCircle");
+
+  console.log(mainContainerCircle[i]);
+}
   marbreS.setProperty("filter","brightness(1)");
 
   iNav = false;

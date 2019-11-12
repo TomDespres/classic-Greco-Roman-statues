@@ -157,7 +157,7 @@ background-position: center;
   /* justify-content:center; */
   /* align-items: center; */
   /* margin:-100px; */
-  transform:  rotate(180deg);
+  transform: scale(1.5) rotate(180deg);
   /* scale(2.5) */
 
 }
@@ -168,16 +168,30 @@ height: 50px;
   overflow: hidden;
 
 }
+#main-container #circle1 {
+stroke: #08EF87;
+}
+#main-container #circle2 {
+stroke: #F6F6F6;
+}
+#main-container #circle3 {
+stroke: #F6F6F6;
+}
 #main-container circle {
   transform: translateY(-50px);
   fill: rgba(0,0,0,0);
-  stroke: #ffffff;
   stroke-width: 50;
-  stroke-dasharray:calc(25*(2*3.14159265358979*50)/100) calc(2*3.14*50);
   /* clip-path:  url("#decoupage2"); */
   transition: stroke-dasharray 1s 0s ease;
 }
-#main-container circle:hover{
+
+.activeCircle{
+  stroke-dasharray:calc(25*(2*3.14159265358979*50)/100) calc(2*3.14*50);
+}
+.inactiveCircle{
+  stroke-dasharray:calc(-1*(2*3.14159265358979*50)/100) calc(2*3.14*50);
+}
+.activeCircle:hover{
   stroke-dasharray:calc(-1*(2*3.14159265358979*50)/100) calc(2*3.14*50);
 
 }
