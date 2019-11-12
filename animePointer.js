@@ -36,7 +36,7 @@ var mainContainerCircle = document.getElementsByClassName('mainContainerCircle')
 //   console.log(element);
 // });
 
-function bgWrapper(){
+function bgWrapper() {
   mask1S.setProperty("transform", "scale(2.3)  translate(-12px, -125px)");
   // mask1S.setProperty("animation-duration", "1s");
   mask2S.setProperty("transform", "scale(2.4) translate(-96px, -75px)");
@@ -48,7 +48,7 @@ function bgWrapper(){
 
 }
 
-function bgRope(){
+function bgRope() {
   mask1S.setProperty("transform", "scale(2.3) translate(-20px, -130px)");
   mask2S.setProperty("transform", "scale(2.4) translate(-100px, -80px)");
   mask3S.setProperty("transform", "scale(2.4) translate(-95px, -130px)");
@@ -64,7 +64,7 @@ function bgRope(){
 //   mask3S.setProperty("animation-duration", ".4s");
 //   mask4S.setProperty("animation-duration", ".4s");
 // }
-function bd(){
+function bd() {
   mask1S.setProperty("transform", "scale(2.3)  translate(-12px, -125px)");
   mask2S.setProperty("transform", "scale(2.4) translate(-96px, -75px)");
   mask3S.setProperty("transform", "scale(2.4) translate(-90px, -125px)");
@@ -73,55 +73,54 @@ function bd(){
   about.innerHTML = "Enter Menu";
   navButton.style.visibility = "visible";
 }
-function clickOnNavButton(){
-  if(iNav==false){
+
+function clickOnNavButton() {
+  if (iNav == false) {
     mask1S.setProperty("transform", "scale(2.3) translate(-20px, -130px)");
     mask2S.setProperty("transform", "scale(2.4) translate(-100px, -80px)");
     mask3S.setProperty("transform", "scale(2.4) translate(-95px, -130px)");
     mask4S.setProperty("transform", "scale(1) translate(920px, -385px)");
-  about.innerHTML = "Work<br>About<br>Contact";
-  navButton.style.visibility = "visible";
+    about.innerHTML = "Work<br>About<br>Contact";
+    navButton.style.visibility = "visible";
 
-  marbreS.setProperty("filter","brightness(0.1)");
-  for(let i=0 ; i <= 2 ;i++){
-    mainContainerCircle[i].classList.remove("activeCircle");
+    marbreS.setProperty("filter", "brightness(0.1)");
 
-    mainContainerCircle[i].classList.add("inactiveCircle");
-  console.log(mainContainerCircle[i]);
-}
-  marbre.removeEventListener("mousemove", bgWrapper);
-  bg.removeEventListener("mouseover", bgRope);
-  navButton.removeEventListener("mousemove", bd);
-  iNav = true;
-}
+    //---------------------------------------------------------Demi-cercles interactions
+    for (let i = 0; i <= 2; i++) {
+      mainContainerCircle[i].classList.remove("activeCircle");
+      mainContainerCircle[i].classList.add("inactiveCircle");
+    }
+    //-------------------------------------------------------------------
+    marbre.removeEventListener("mousemove", bgWrapper);
+    bg.removeEventListener("mouseover", bgRope);
+    navButton.removeEventListener("mousemove", bd);
+    iNav = true;
+  } else {
+    // navButton.addEventListener("mousemove", quitMenu);
+    marbre.addEventListener("mousemove", bgWrapper);
+    bg.addEventListener("mouseover", bgRope);
+    navButton.addEventListener("mousemove", bd);
 
-else{
-  // navButton.addEventListener("mousemove", quitMenu);
-  marbre.addEventListener("mousemove", bgWrapper);
-  bg.addEventListener("mouseover", bgRope);
-  navButton.addEventListener("mousemove", bd);
+    navButtonS.setProperty("pointer-event", "none");
+    navButton.style.visibility = "hidden";
 
-  navButtonS.setProperty("pointer-event","none");
-  navButton.style.visibility = "hidden";
-  for(var i=0 ; i <= 2 ;i++){
-    mainContainerCircle[i].classList.remove("inactiveCircle");
 
-  mainContainerCircle[i].classList.add("activeCircle");
+    //---------------------------------------------------------Demi-cercles interactions
+    for (var i = 0; i <= 2; i++) {
+      mainContainerCircle[i].classList.remove("inactiveCircle");
+      mainContainerCircle[i].classList.add("activeCircle");
+    }
+    // --------------------------------------------------------
 
-  console.log(mainContainerCircle[i]);
-}
-  marbreS.setProperty("filter","brightness(1)");
-
-  iNav = false;
-
-}
-
+    marbreS.setProperty("filter", "brightness(1)");
+    iNav = false;
+  }
 }
 
 if (iNav == false) {
   console.log(iNav);
   marbre.addEventListener("mousemove", bgWrapper);
   bg.addEventListener("mouseover", bgRope);
-  navButton.addEventListener("mousemove",bd);
+  navButton.addEventListener("mousemove", bd);
   navButton.addEventListener("click", clickOnNavButton);
 }

@@ -150,23 +150,17 @@ background-position: center;
 
 
 }
+
+/*------------------------------------------DEMI-CERCLES */
 #main-container #wrapperSVG{
   width:100px;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content:center; */
-  /* align-items: center; */
-  /* margin:-100px; */
   transform: scale(1.5) rotate(180deg);
-  /* scale(2.5) */
-
 }
 .containerSVG{
 height: 50px;
 }
 .containerSVG svg{
   overflow: hidden;
-
 }
 #main-container #circle1 {
 stroke: #08EF87;
@@ -184,7 +178,6 @@ stroke: #F6F6F6;
   /* clip-path:  url("#decoupage2"); */
   transition: stroke-dasharray 1s 0s ease;
 }
-
 .activeCircle{
   stroke-dasharray:calc(25*(2*3.14159265358979*50)/100) calc(2*3.14*50);
 }
@@ -193,5 +186,5 @@ stroke: #F6F6F6;
 }
 .activeCircle:hover{
   stroke-dasharray:calc(-1*(2*3.14159265358979*50)/100) calc(2*3.14*50);
-
 }
+/* ----------------------------------------------------------------------------------------- */
