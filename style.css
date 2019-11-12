@@ -1,0 +1,226 @@
+body{
+  height:100vh;
+  overflow: hidden;
+}
+
+/*--------- rend invisible la balise svg (etant un module pour un masque)-----*/
+.path{
+  position: absolute;
+  width:0;
+  height:0;
+  margin:0;
+  padding:0;
+}
+.svg-container {
+display: inline-block;
+position: relative;
+width: 100%;
+padding-bottom: 100%;
+vertical-align: middle;
+overflow: hidden;
+}
+.svg-content{
+  /* z-index:25; */
+  width:100%;
+  height:100%;
+}
+.circle{
+  animation: circle 5s 0s ease;
+  animation-iteration-count: infinite;
+animation-direction: alternate;
+
+}
+.circle:hover {
+  animation: circle .5s 0s ease;
+  animation-iteration-count: infinite;
+animation-direction: alternate;
+}
+@keyframes circle {
+  to{
+    r: 175;
+  }
+  from{
+    r: 200;
+  }
+}
+/*------------------------------*/
+path{
+  width:1000px;
+}
+#main-container{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
+}
+#nav-wrapper{
+  position: absolute;
+  top:0;
+  z-index:2;
+  width:100%;
+  height:100%;
+  background-color: rgba(0,100,200,0);
+pointer-events: none;
+}
+#navButton{
+  z-index: 3;
+  position: absolute;
+  top:0;
+  right:0;
+  width:50px;
+  height:50px;
+  background-color: blue;
+  cursor: pointer;
+  visibility:hidden;
+}
+#about{
+  position: absolute;
+  top:0;
+
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "arial";
+  font-size: 30px;
+  color:rgba(200,200,200,1);
+  text-align: center;
+}
+#bg-timbre{
+  width:100vw;
+  height:100vh;
+  background-image: url("imgs/bgMarbre.png");
+  background-size: cover;
+  background-position: center;
+
+
+}
+#bg-rope{
+  width:100%;
+  height:100%;
+  background-color: #1F1D1E;
+  /* overflow-y: hidden; */
+  background-size: cover;
+}
+
+#mask1{
+  animation: mask1 10s 0s ease;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  /* transform: scale(3) translate(-100px, -100px); */
+
+}
+#mask1:hover{
+  color: blue;
+}
+#mask2{
+  animation: mask2 10s -2s ease;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  /* transform: scale(3) translate(-100px, -100px); */
+
+}
+#mask3{
+  animation: mask3 10s -4s ease;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  /* transform: scale(3) translate(-100px, -100px); */
+
+}
+#mask4{
+  animation: mask4 10s -4s ease;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  /* transform: scale(0.5); */
+}
+#mask5{
+  width:100vw;
+  transform: translate(-200px, 210px);
+}
+
+@keyframes mask1 {
+  to{
+    transform: scale(2.3) translate(-20px, -130px);
+
+  }
+  from{
+    transform: scale(2.3) translate(-12px, -125px);
+
+  }
+
+}
+@keyframes mask2 {
+  to{
+    transform: scale(2.4) translate(-100px, -80px);
+
+  }
+  from{
+    transform: scale(2.4) translate(-96px, -75px);
+
+  }
+
+}
+@keyframes mask3 {
+  to{
+    transform: scale(2.4) translate(-95px, -130px);
+
+  }
+  from{
+    transform: scale(2.4) translate(-90px, -125px);
+
+  }
+
+}
+@keyframes mask4 {
+  to{
+    transform: scale(1) translate(920px, -385px);
+  }
+  from{
+    transform: scale(1) translate(900px, -400px);
+  }
+}
+@keyframes mask5 {
+  to{
+    transform: scale(1) translate(920px, -385px);
+  }
+  from{
+    transform: scale(1) trans late(900px, -400px);
+  }
+}
+#decoupage{
+
+}
+
+/* #bg-wrapper:hover #mask1{
+  animation-duration: 0.4s;
+}
+#bg-wrapper:hover #mask2{
+  animation-duration: 0.4s;
+}#bg-wrapper:hover #mask3{
+  animation-duration: 0.4s;
+}#bg-wrapper:hover #mask4{
+  animation-duration: 0.4s;
+} */
+#bg-wrapper{
+  z-index:1;
+  position: absolute;
+  top:0;
+  width:100vw;
+  height:100vh;
+  background-image: url("imgs/bgMarbre.png");
+  background-size: cover;
+background-position: center;
+  clip-path:  url("#decoupage");
+
+  /* mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-origin: fill-box;
+  mask-size: 10px;
+  mask-image: url("#decoupage"); */
+
+
+}
