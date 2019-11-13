@@ -2,7 +2,12 @@ body{
   height:100vh;
   overflow: hidden;
 }
-
+canvas{
+  position: absolute;
+  top:0;
+  left:0;
+  /* z-index:0; */
+}
 /*--------- rend invisible la balise svg (etant un module pour un masque)-----*/
 .path{
   position: absolute;
@@ -87,6 +92,7 @@ pointer-events: none;
   color:rgba(200,200,200,1);
   text-align: center;
 }
+
 #bg-timbre{
   width:100vw;
   height:100vh;
