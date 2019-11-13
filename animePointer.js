@@ -86,10 +86,13 @@ function clickOnNavButton() {
     marbreS.setProperty("filter", "brightness(0.1)");
 
     //---------------------------------------------------------Demi-cercles interactions
-    for (let i = 0; i <= 2; i++) {
+    for (let i = 0; i <=6; i++) {
       mainContainerCircle[i].classList.remove("activeCircle");
       mainContainerCircle[i].classList.add("inactiveCircle");
     }
+    mainContainerCircle[3].classList.remove("activeCircleComplet");
+
+
     //-------------------------------------------------------------------
     marbre.removeEventListener("mousemove", bgWrapper);
     bg.removeEventListener("mouseover", bgRope);
@@ -106,10 +109,14 @@ function clickOnNavButton() {
 
 
     //---------------------------------------------------------Demi-cercles interactions
-    for (var i = 0; i <= 2; i++) {
+    for (var i = 0; i <= 6; i++) {
       mainContainerCircle[i].classList.remove("inactiveCircle");
       mainContainerCircle[i].classList.add("activeCircle");
     }
+    mainContainerCircle[3].classList.remove("activeCircle");
+
+    mainContainerCircle[3].classList.add("activeCircleComplet");
+
     // --------------------------------------------------------
 
     marbreS.setProperty("filter", "brightness(1)");

@@ -155,22 +155,61 @@ background-position: center;
 #main-container #wrapperSVG{
   width:100px;
   transform: scale(1.5) rotate(180deg);
+  position: absolute;
+  bottom:20%;
+  left:28%;
+  z-index:10;
+}
+#main-container #wrapperSVG2{
+  width:100px;
+  transform: scale(1.5) rotate(180deg);
+  position: absolute;
+  bottom: calc(20% - 74.5px);
+  left: calc(28% - 150px);
+  z-index:10;
+}
+#main-container #wrapperSVG3{
+  width:100px;
+  transform: scale(1.5) rotate(180deg);
+  position: absolute;
+  top: calc(20%);
+  right: calc(35%);
+  z-index:10;
 }
 .containerSVG{
 height: 50px;
+}
+.containerSVG2{
+height: 100px;
 }
 .containerSVG svg{
   overflow: hidden;
 }
 #main-container #circle1 {
-stroke: #08EF87;
+stroke: #F6F6F6;
+mix-blend-mode: difference;
 }
 #main-container #circle2 {
-stroke: #F6F6F6;
+stroke:  #08EF87;
 }
 #main-container #circle3 {
 stroke: #F6F6F6;
 }
+#main-container #circle4 {
+stroke: #F6F6F6;
+mix-blend-mode: difference;
+
+}
+#main-container #circle5 {
+stroke: #08EF87;
+}
+#main-container #circle6 {
+stroke: #08EF87;
+}
+#main-container #circle7 {
+stroke: #08EF87;
+}
+
 #main-container circle {
   transform: translateY(-50px);
   fill: rgba(0,0,0,0);
@@ -180,6 +219,18 @@ stroke: #F6F6F6;
 }
 .activeCircle{
   stroke-dasharray:calc(25*(2*3.14159265358979*50)/100) calc(2*3.14*50);
+}
+#main-container .activeCircleComplet{
+  stroke-dasharray:calc(50*(2*3.14159265358979*50)/100) calc(2*3.14*50);
+  transform: translateY(0px);
+
+}
+#main-container .activeCircleCompletTranslate{
+  transform: translateY(0px);
+}
+#main-container .activeCircleComplet:hover{
+  stroke-dasharray:calc(-1*(2*3.14159265358979*50)/100) calc(2*3.14*50);
+  transform: translateY(0px);
 }
 .inactiveCircle{
   stroke-dasharray:calc(-1*(2*3.14159265358979*50)/100) calc(2*3.14*50);
